@@ -1,6 +1,5 @@
 package com.phoenix.phoenixtales.core;
 
-import com.mojang.logging.LogUtils;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -9,13 +8,13 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
-import org.slf4j.Logger;
+import org.apache.logging.log4j.Logger;
 
 @Mod(value = PhoenixTales.MOD_ID)
 public class PhoenixTales {
 
     public static final String MOD_ID = "phoenixtales";
-    public static final Logger log = LogUtils.getLogger();
+    public static final Logger log = LogManager.getLogger(MOD_ID);
 
 
     public PhoenixTales() {
@@ -25,6 +24,7 @@ public class PhoenixTales {
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
+
     }
 
     @SubscribeEvent

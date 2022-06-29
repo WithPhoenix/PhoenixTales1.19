@@ -124,10 +124,10 @@ repositories {
     // }
 
     // jei
-//    maven {
-//        name = "Progwml6 maven"
-//        url = "https://dvs1.progwml6.com/files/maven/"
-//    }
+    maven {
+        name = "JEI"
+        url "https://dvs1.progwml6.com/files/maven/"
+    }
 }
 
 dependencies {
@@ -136,6 +136,8 @@ dependencies {
     // The userdev artifact is a special name and will get all sorts of transformations applied to it.
     minecraft 'net.minecraftforge:forge:1.19-41.0.45'
 
+    compileOnly fg.deobf("mezz.jei:jei-1.18.2:9.4.3.122:api")
+    runtimeOnly fg.deobf("mezz.jei:jei-1.18.2:9.4.3.122")
 
     // Real mod deobf dependency examples - these get remapped to your current mappings
 //     compileOnly fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}:api") // Adds JEI API as a compile dependency
